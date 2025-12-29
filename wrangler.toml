@@ -1,0 +1,6 @@
+name = "rice-docs"
+compatibility_date = "2025-12-29"
+pages_build_output_dir = ".output/public"
+
+[site]
+bucket = ".output/public"
