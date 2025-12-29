@@ -1,18 +1,18 @@
 ---
-title: Connecting to RiceDB
-description: Learn how to connect to your RiceDB instance.
+title: Connecting to Rice
+description: Learn how to connect to your Rice instance.
 navigation:
   icon: i-lucide-plug
 seo:
-  title: Connecting to RiceDB
-  description: Detailed guide on connecting to RiceDB using Python SDK with HTTP and gRPC transport.
+  title: Connecting to Rice
+  description: Detailed guide on connecting to Rice using Python SDK with HTTP and gRPC transport.
 ---
 
-RiceDB supports multiple transport protocols to optimize for different use cases. The Python SDK abstracts most of this complexity away, but understanding the options can help you tune performance.
+Rice supports multiple transport protocols to optimize for different use cases. The Python SDK abstracts most of this complexity away, but understanding the options can help you tune performance.
 
 ## Installation
 
-RiceDB is currently in beta. Please install the client directly from the repository:
+Rice is currently in beta. Please install the client directly from the repository:
 
 ```bash
 # Standard installation (HTTP support)
@@ -72,7 +72,7 @@ For production deployments, we recommend using gRPC for better performance.
 
 - Ensure the host address is correct.
 - Check if your firewall allows outbound traffic on ports 3000 or 50051.
-- Verify the instance status in the [RiceDB Console](https://app.tryrice.com).
+- Verify the instance status in the [Rice Console](https://app.tryrice.com).
 
 ### "Authentication Failed"
 

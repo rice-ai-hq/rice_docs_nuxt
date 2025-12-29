@@ -1,20 +1,20 @@
 ---
 title: Core Concepts
-description: Understanding the foundational concepts of RiceDB.
+description: Understanding the foundational concepts of Rice.
 navigation:
   icon: i-lucide-lightbulb
 seo:
   title: Core Concepts
-  description: Deep dive into Hyper Vectors, Neural Associations, and Memory architecture in RiceDB.
+  description: Deep dive into Hyper Vectors, Neural Associations, and Memory architecture in Rice.
 ---
 
-RiceDB is designed around four key pillars that enable robust AI agents.
+Rice is designed around four key pillars that enable robust AI agents.
 
 ---
 
 ## 1. Long-Term Memory (Hyper Vectors & Associations)
 
-To make intelligent decisions, agents need access to vast amounts of persistent knowledge. RiceDB unifies two powerful paradigms to create a robust Long-Term Memory system.
+To make intelligent decisions, agents need access to vast amounts of persistent knowledge. Rice unifies two powerful paradigms to create a robust Long-Term Memory system.
 
 ### Hyper Vectors
 
@@ -26,7 +26,7 @@ Enable high-fidelity semantic search. Agents can "recall" information based on m
 
 ### Neural Associations
 
-Encodes relationships directly into the high-dimensional space. Unlike traditional graphs that use rigid pointers, RiceDB uses fluid associations.
+Encodes relationships directly into the high-dimensional space. Unlike traditional graphs that use rigid pointers, Rice uses fluid associations.
 
 - **Implicit Linking**: Relationships are discovered based on usage and context, not just manual entry.
 - **Path Navigation**: Agents can "follow" a thought process from one concept to another.
@@ -63,7 +63,7 @@ In multi-user or multi-agent environments, data isolation is critical.
 
 Traditional vector databases often lack fine-grained security. Filtering results _after_ search is slow and insecure.
 
-### The RiceDB Solution
+### The Rice Solution
 
 - **Zero-Latency Checks**: Permissions are encoded into the search index itself.
 - **Document-Level Granularity**: Control `read`, `write`, and `delete` permissions per user and per document.
@@ -73,7 +73,7 @@ Traditional vector databases often lack fine-grained security. Filtering results
 
 ## 4. Hyperdimensional Computing (HDC)
 
-Under the hood, RiceDB uses advanced Hyperdimensional Computing techniques.
+Under the hood, Rice uses advanced Hyperdimensional Computing techniques.
 
 ### What is it?
 
@@ -86,5 +86,5 @@ A computing paradigm inspired by how the brain works, using large holographic ve
 - **Reliability**: Highly tolerant to hardware faults or bit-flips.
 
 ::tip
-You don't need to understand HDC math to use RiceDB, but it powers the speed and efficiency of the system.
+You don't need to understand HDC math to use Rice, but it powers the speed and efficiency of the system.
 ::

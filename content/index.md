@@ -1,17 +1,17 @@
 ---
 seo:
-  title: RiceDB - The Unified Database for Autonomous AI Agents
+  title: Rice - The Unified Database for Autonomous AI Agents
   description: The first database purpose-built for AI agents. Unifies Hyper Vector Search, Neural Associations, and Agent Memory into a single, high-performance engine.
 ---
 
 ::u-page-hero
 #title
-Welcome to RiceDB
+Welcome to Rice
 
 #description
 **The Unified Database for Autonomous AI Agents**
 
-RiceDB is the first database purpose-built for the next generation of AI agents. It unifies **Hyper Vector Search**, **Neural Associations**, and **Agent Memory** into a single, high-performance engine.
+Rice is the first database purpose-built for the next generation of AI agents. It unifies **Hyper Vector Search**, **Neural Associations**, and **Agent Memory** into a single, high-performance engine.
 
 #links
 :::u-button
@@ -46,7 +46,7 @@ View on GitHub
 
 ::u-page-section
 #title
-Why RiceDB?
+Why Rice?
 
 #features
 :::u-page-feature
@@ -76,7 +76,7 @@ icon: i-lucide-network
 [Structural Reasoning]{.text-primary}
 
 #description
-Go beyond simple similarity. Navigate semantic associations natively to give your agents true context understanding. RiceDB finds not just what is _similar_, but what is _connected_.
+Go beyond simple similarity. Navigate semantic associations natively to give your agents true context understanding. Rice finds not just what is _similar_, but what is _connected_.
 :::
 
 :::u-page-feature

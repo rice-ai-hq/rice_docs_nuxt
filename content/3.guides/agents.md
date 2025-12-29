@@ -1,14 +1,14 @@
 ---
 title: Building Agents
-description: Build intelligent agents with RiceDB.
+description: Build intelligent agents with Rice.
 navigation:
   icon: i-lucide-bot
 seo:
-  title: Building Agents with RiceDB
-  description: Learn how to build autonomous agents using RiceDB's state management features.
+  title: Building Agents with Rice
+  description: Learn how to build autonomous agents using Rice's state management features.
 ---
 
-RiceDB is built from the ground up to support the state management needs of autonomous agents.
+Rice is built from the ground up to support the state management needs of autonomous agents.
 
 ## Rice Agents Framework
 
@@ -36,7 +36,7 @@ Full documentation and examples.
 
 ## Agent Architecture
 
-A typical RiceDB-powered agent operates in a loop:
+A typical Rice-powered agent operates in a loop:
 
 1.  **Observe**: Read user input and current context from **Working Memory**.
 2.  **Recall**: Query **Long-Term Memory** for relevant knowledge (Hyper Vectors) and related concepts (Associations).
@@ -47,7 +47,7 @@ A typical RiceDB-powered agent operates in a loop:
 
 ## Working Memory (Scratchpad)
 
-One of RiceDB's most powerful features for agents is the **Working Memory** layer. This allows agents to store ephemeral context without the overhead of re-embedding or polluting the long-term Hyper Vector store.
+One of Rice's most powerful features for agents is the **Working Memory** layer. This allows agents to store ephemeral context without the overhead of re-embedding or polluting the long-term Hyper Vector store.
 
 ### When to use Working Memory vs Long-Term Memory?
 
@@ -107,7 +107,7 @@ print(agent_loop("What is the status of Project X?"))
 
 ## Multi-Agent Coordination
 
-RiceDB facilitates coordination between multiple agents using shared memory spaces and Pub/Sub.
+Rice facilitates coordination between multiple agents using shared memory spaces and Pub/Sub.
 
 1.  **Shared Workspace**: Multiple agents can write to the same `session_id` in memory to share progress.
 2.  **Real-time Updates**: Agents can subscribe to changes on specific memory sessions to react immediately to new information (using gRPC).
