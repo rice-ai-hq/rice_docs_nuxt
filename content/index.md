@@ -28,9 +28,7 @@ trailing-icon: i-lucide-arrow-right
 Get started
 :::
 
-:::u-button
-
----
+## :::u-button
 
 color: neutral
 icon: simple-icons-github
@@ -53,9 +51,7 @@ Why Rice?
 
 ---
 
-icon: i-lucide-brain
-
----
+## icon: i-lucide-brain
 
 #title
 [Serverless & Scalable]{.text-primary}
@@ -64,13 +60,9 @@ icon: i-lucide-brain
 No infrastructure to manage. Rice provides a fully managed backend for agent context and state. Scale from prototype to production without touching a config file.
 :::
 
-:::u-page-feature
+## :::u-page-feature
 
----
-
-icon: i-lucide-layers
-
----
+## icon: i-lucide-layers
 
 #title
 [Scratchpad for Agent Context]{.text-primary}
@@ -79,13 +71,9 @@ icon: i-lucide-layers
 Purpose-built scratchpad memory for agent state management. Track conversations, tasks, and intermediate thoughts with millisecond latency. No embedding overhead.
 :::
 
-:::u-page-feature
+## :::u-page-feature
 
----
-
-icon: i-lucide-search
-
----
+## icon: i-lucide-search
 
 #title
 [Semantic Memory & Associations]{.text-primary}
@@ -94,13 +82,9 @@ icon: i-lucide-search
 Combine scratchpad context with semantic search over your knowledge base. Navigate neural associations to give agents true context understanding, not just similarity.
 :::
 
-:::u-page-feature
+## :::u-page-feature
 
----
-
-icon: i-lucide-users
-
----
+## icon: i-lucide-users
 
 #title
 [Multi-Tenant Ready]{.text-primary}
@@ -109,13 +93,9 @@ icon: i-lucide-users
 Built-in ACLs for secure data isolation. Perfect for building multi-user AI applications and SaaS platforms without managing your own backend infrastructure.
 :::
 
-:::u-page-feature
+## :::u-page-feature
 
----
-
-icon: i-lucide-zap
-
----
+## icon: i-lucide-zap
 
 #title
 [Production-Ready Performance]{.text-primary}
@@ -124,13 +104,9 @@ icon: i-lucide-zap
 Built on Rust with zero-copy architecture. Sub-millisecond scratchpad reads and low-latency semantic search optimized for real-time agent loops.
 :::
 
-:::u-page-feature
+## :::u-page-feature
 
----
-
-icon: i-lucide-cloud
-
----
+## icon: i-lucide-cloud
 
 #title
 [Simple API, Powerful Features]{.text-primary}
