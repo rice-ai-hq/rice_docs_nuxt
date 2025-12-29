@@ -20,15 +20,13 @@ For the fastest way to get started, we recommend using the **Rice Agents** frame
 pip install git+https://github.com/rice-ai-hq/rice_agents.git
 ```
 
-## ::card
-
+::card
+---
 icon: i-simple-icons-github
-target: \_blank
+target: _blank
 title: Rice Agents on GitHub
 to: https://github.com/rice-ai-hq/rice_agents
-
 ---
-
 Full documentation and examples.
 ::
 
