@@ -5,10 +5,10 @@ navigation:
   icon: i-lucide-lightbulb
 seo:
   title: Core Concepts
-  description: Deep dive into Hyper Vectors, Neural Associations, and Memory architecture in Rice.
+  description: Deep dive into Scratchpad Memory, Semantic Search, and Neural Associations in Rice.
 ---
 
-Rice is designed around four key pillars that enable robust AI agents.
+Rice is a serverless backend designed around key capabilities that enable stateful, context-aware AI agents.
 
 ---
 

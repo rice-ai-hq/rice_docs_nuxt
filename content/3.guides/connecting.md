@@ -1,14 +1,14 @@
 ---
 title: Connecting to Rice
-description: Learn how to connect to your Rice instance.
+description: Learn how to connect to your Rice backend.
 navigation:
   icon: i-lucide-plug
 seo:
   title: Connecting to Rice
-  description: Detailed guide on connecting to Rice using Python SDK with HTTP and gRPC transport.
+  description: Detailed guide on connecting to your serverless Rice backend using Python SDK.
 ---
 
-Rice supports multiple transport protocols to optimize for different use cases. The Python SDK abstracts most of this complexity away, but understanding the options can help you tune performance.
+Connecting to your Rice serverless backend is simple. The Python SDK supports multiple transport protocols to optimize for different use cases, abstracting most complexity while giving you control when needed.
 
 ## Installation
 

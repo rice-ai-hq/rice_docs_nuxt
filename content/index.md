@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Rice - The Unified Database for Autonomous AI Agents
-  description: The first database purpose-built for AI agents. Unifies Hyper Vector Search, Neural Associations, and Agent Memory into a single, high-performance engine.
+  title: Rice - Serverless Backend for Agentic Context & State
+  description: The first serverless backend purpose-built for AI agents. Manage agent context, state, and memory with a unified scratchpad and long-term storage.
 ---
 
 ::u-page-hero
@@ -9,39 +9,31 @@ seo:
 Welcome to Rice
 
 #description
-**The Unified Database for Autonomous AI Agents**
+**Serverless Backend for Agentic Context & State**
 
-Rice is the first database purpose-built for the next generation of AI agents. It unifies **Hyper Vector Search**, **Neural Associations**, and **Agent Memory** into a single, high-performance engine.
+Rice is the first serverless backend purpose-built for AI agents. Seamlessly manage agent context and state with **Scratchpad Memory**, **Semantic Search**, and **Neural Associations** in a single platform.
 
 #links
-:::u-button
+  :::u-button
+  ---
+  color: neutral
+  size: xl
+  to: /getting-started/introduction
+  trailing-icon: i-lucide-arrow-right
+  ---
+  Get started
+  :::
 
----
-
-color: neutral
-size: xl
-to: /getting-started/introduction
-trailing-icon: i-lucide-arrow-right
-
----
-
-Get started
-:::
-
-:::u-button
-
----
-
-color: neutral
-icon: simple-icons-github
-size: xl
-to: https://github.com/rice-ai-hq
-variant: outline
-
----
-
-View on GitHub
-:::
+  :::u-button
+  ---
+  color: neutral
+  icon: simple-icons-github
+  size: xl
+  to: https://github.com/rice-ai-hq
+  variant: outline
+  ---
+  View on GitHub
+  :::
 ::
 
 ::u-page-section
@@ -49,93 +41,69 @@ View on GitHub
 Why Rice?
 
 #features
-:::u-page-feature
+  :::u-page-feature
+  ---
+  icon: i-lucide-brain
+  ---
+  #title
+  [Serverless & Scalable]{.text-primary}
+  
+  #description
+  No infrastructure to manage. Rice provides a fully managed backend for agent context and state. Scale from prototype to production without touching a config file.
+  :::
 
----
+  :::u-page-feature
+  ---
+  icon: i-lucide-layers
+  ---
+  #title
+  [Scratchpad for Agent Context]{.text-primary}
+  
+  #description
+  Purpose-built scratchpad memory for agent state management. Track conversations, tasks, and intermediate thoughts with millisecond latency. No embedding overhead.
+  :::
 
-icon: i-lucide-brain
+  :::u-page-feature
+  ---
+  icon: i-lucide-search
+  ---
+  #title
+  [Semantic Memory & Associations]{.text-primary}
+  
+  #description
+  Combine scratchpad context with semantic search over your knowledge base. Navigate neural associations to give agents true context understanding, not just similarity.
+  :::
 
----
+  :::u-page-feature
+  ---
+  icon: i-lucide-users
+  ---
+  #title
+  [Multi-Tenant Ready]{.text-primary}
+  
+  #description
+  Built-in ACLs for secure data isolation. Perfect for building multi-user AI applications and SaaS platforms without managing your own backend infrastructure.
+  :::
 
-#title
-[Dual-Memory Architecture]{.text-primary}
+  :::u-page-feature
+  ---
+  icon: i-lucide-zap
+  ---
+  #title
+  [Production-Ready Performance]{.text-primary}
+  
+  #description
+  Built on Rust with zero-copy architecture. Sub-millisecond scratchpad reads and low-latency semantic search optimized for real-time agent loops.
+  :::
 
-#description
-Seamlessly integrate **Working Memory** (scratchpad) for active tasks with **Long-Term Memory** (Hyper Vectors & Associations) for deep knowledge. Agents can "think" fast in scratchpad and "remember" deep context from long-term storage.
-:::
-
-:::u-page-feature
-
----
-
-icon: i-lucide-network
-
----
-
-#title
-[Structural Reasoning]{.text-primary}
-
-#description
-Go beyond simple similarity. Navigate semantic associations natively to give your agents true context understanding. Rice finds not just what is _similar_, but what is _connected_.
-:::
-
-:::u-page-feature
-
----
-
-icon: i-lucide-zap
-
----
-
-#title
-[High Performance]{.text-primary}
-
-#description
-Built on Rust with a Zero-Copy architecture. Low-latency retrieval optimized for real-time agent interactions, even under heavy load.
-:::
-
-:::u-page-feature
-
----
-
-icon: i-lucide-shield-check
-
----
-
-#title
-[Secure by Design]{.text-primary}
-
-#description
-Granular Access Control Lists (ACLs) ensure data isolation in multi-tenant environments. Perfect for building SaaS platforms where data privacy is paramount.
-:::
-
-:::u-page-feature
-
----
-
-icon: i-lucide-search
-
----
-
-#title
-[Autonomous Research Agents]{.text-primary}
-
-#description
-Store current research goals in Working Memory, index millions of documents as Hyper Vectors, and link findings to sources with Associations.
-:::
-
-:::u-page-feature
-
----
-
-icon: i-lucide-code
-
----
-
-#title
-[Coding Assistants]{.text-primary}
-
-#description
-Track current file context in Working Memory, search entire codebase embeddings, and understand function call graphs and dependency trees with Associations.
-:::
+  :::u-page-feature
+  ---
+  icon: i-lucide-cloud
+  ---
+  #title
+  [Simple API, Powerful Features]{.text-primary}
+  
+  #description
+  Get started in minutes with our Python SDK. No database schemas, no deployment pipelines. Just focus on building intelligent agents.
+  :::
 ::

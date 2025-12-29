@@ -5,10 +5,10 @@ navigation:
   icon: i-lucide-bot
 seo:
   title: Building Agents with Rice
-  description: Learn how to build autonomous agents using Rice's state management features.
+  description: Learn how to build autonomous agents using Rice's serverless backend for context and state.
 ---
 
-Rice is built from the ground up to support the state management needs of autonomous agents.
+Rice provides a serverless backend purpose-built for managing agent context, state, and memory—so you can focus on building intelligent behavior, not infrastructure.
 
 ## Rice Agents Framework
 
