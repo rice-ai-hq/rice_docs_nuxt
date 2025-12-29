@@ -1,9 +1,9 @@
 export default defineNuxtConfig({
   site: {
     name: 'Rice',
-    url: 'https://tryrice.com',
+    url: 'https://docs.tryrice.com',
   },
   llms: {
-    domain: 'tryrice.com',
+    domain: 'docs.tryrice.com',
   },
 })
