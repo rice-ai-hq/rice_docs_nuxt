@@ -12,17 +12,34 @@ Connecting to Slate is simple. Both Node.js and Python clients use the `CortexCl
 
 ## Installation
 
+Slate clients are currently available via the GitHub repository.
+
 ### Node.js / TypeScript
 
 ```bash
-npm install slate-client
+# Clone and build
+git clone https://github.com/rice-ai-hq/rice_slate.git
+cd rice_slate/clients/node
+npm install
+npm run build
 ```
 
 ### Python
 
 ```bash
-pip install slate-client
+# Install from GitHub
+pip install git+https://github.com/rice-ai-hq/rice_slate.git#subdirectory=clients/python
 ```
+
+::card
+---
+icon: i-simple-icons-github
+target: _blank
+title: rice_slate on GitHub
+to: https://github.com/rice-ai-hq/rice_slate
+---
+Full source code and examples.
+::
 
 ## Connection Basics
 
@@ -30,10 +47,18 @@ You need two pieces of information to connect:
 - **Address**: Your Slate instance address (e.g., `localhost:50051` or `xyz-123.slate.cloud:50051`)
 - **Auth Token**: Your secret authentication token
 
+::callout{icon="i-lucide-info" color="blue"}
+**Note**: Since the clients are not yet published to npm/PyPI, adjust your import paths based on your local setup.
+::
+
 ### Node.js
 
 ```typescript
-import { CortexClient } from "slate-client";
+// If installed locally from the cloned repo:
+import { CortexClient } from "./path/to/rice_slate/clients/node/dist";
+
+// Once published to npm:
+// import { CortexClient } from "slate-client";
 
 const client = new CortexClient("localhost:50051", "your-secret-token");
 ```
@@ -53,7 +78,7 @@ Test your connection by performing a simple Flux operation:
 ### Node.js
 
 ```typescript
-import { CortexClient } from "slate-client";
+import { CortexClient } from "./path/to/rice_slate/clients/node/dist";
 
 const client = new CortexClient("localhost:50051", "your-secret-token");
 

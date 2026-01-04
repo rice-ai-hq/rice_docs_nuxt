@@ -39,10 +39,15 @@ This loop turns a stateless LLM into an agent that learns from every interaction
 
 ## Code Example: Full Agent Loop
 
+::callout{icon="i-lucide-info" color="blue"}
+**Note**: Adjust your import path based on where you cloned the repository.
+::
+
 ### Node.js / TypeScript
 
 ```typescript
-import { CortexClient } from "slate-client";
+// Adjust path to your local clone
+import { CortexClient } from "./rice_slate/clients/node/dist";
 
 const client = new CortexClient("localhost:50051", "your-token");
 
