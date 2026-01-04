@@ -8,7 +8,7 @@ seo:
   description: Learn how to build autonomous agents that learn and remember using Slate's memory systems.
 ---
 
-Slate provides the cognitive substrate for building agents that learn from experience, maintain context, and execute skills—turning stateless LLMs into intelligent, adaptive systems.
+Slate provides the cognitive substrate for building agents that learn from experience, maintain context, and execute skills. It turns stateless LLMs into intelligent, adaptive systems.
 
 ## The Cognitive Agent Loop
 

@@ -110,7 +110,7 @@ print(f"Connected! Found {len(items.items)} items in Working Memory.")
 Slate uses gRPC for efficient, low-latency communication. The default port is `50051`.
 
 ::callout{icon="i-lucide-zap" color="primary"}
-gRPC provides faster serialization, bidirectional streaming, and persistent connections—ideal for real-time agent loops.
+gRPC provides faster serialization, bidirectional streaming, and persistent connections, ideal for real-time agent loops.
 ::
 
 ## Troubleshooting
@@ -129,7 +129,7 @@ gRPC provides faster serialization, bidirectional streaming, and persistent conn
 ### "Transport Error"
 
 - Ensure your network allows gRPC traffic.
-- Some corporate proxies block gRPC—try from a different network.
+- Some corporate proxies block gRPC. Try from a different network.
 
 ::tip
 Use environment variables to store your auth token securely:

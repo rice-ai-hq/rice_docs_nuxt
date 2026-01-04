@@ -1,36 +1,59 @@
 ---
 title: Core Concepts
-description: Understanding the foundational concepts of Slate.
+description: Understanding the foundational concepts of Rice Slate.
 navigation:
   icon: i-lucide-lightbulb
 seo:
   title: Core Concepts
-  description: Deep dive into Working, Episodic, and Procedural memory—the three memory systems in Slate.
+  description: Deep dive into the Rice Slate architecture and its four memory systems.
 ---
 
-Slate is a "Cognitive Substrate" for AI agents—a memory-as-a-service platform that provides structured memory systems inspired by human cognition.
+Rice Slate is a state and runtime context management layer for AI agents. It provides structured memory systems inspired by human cognition, powered by RiceDB's persistent storage.
 
 ---
 
-## 1. Working Memory
+## What is RiceDB?
+
+RiceDB is the persistent storage and memory engine that powers Rice Slate. It uses Hyperdimensional Computing (HDC) to contextualize data, mapping it as graph equivalents without the need for edge-based traversal.
+
+### How RiceDB Works
+
+- **HDC Encoding**: Data is projected into high-dimensional vectors, enabling associative fetching and clustering
+- **Linear Algebra Operations**: Convolution at the hyper vector level ensures data and metadata aren't lost, even with noise
+- **Persistent Storage**: Long-term storage of all agent state and knowledge
+
+RiceDB handles the low-level storage, indexing, and vector operations. Rice Slate builds on top of RiceDB to provide the cognitive abstractions that make it easy to build learning, stateful agents.
+
+---
+
+## What is Rice Slate?
+
+Rice Slate is the state and runtime context management layer that sits between your AI agents and RiceDB. It provides a quad-component memory architecture:
+
+| Memory Type | Purpose |
+| :---------- | :------ |
+| **Working Memory** | Direct bridge between persistent storage and runtime. Pre-fetches context and relevant data for execution. |
+| **Episodic Memory** | Captures and tracks agent data: reasoning, inputs, outcomes, and actions. |
+| **Procedural Memory** | Stores executable skills, code, and sub-agents. |
+| **Semantic Memory** | Stores invariant facts and knowledge for agentic use. |
+
+---
+
+## The Four Memory Types
+
+### 1. Working Memory
 
 **"The Attention Span"**
 
-Working Memory manages the agent's immediate context. Unlike a raw context window, it is dynamic and attention-based.
+Working Memory is the direct bridge between persistent storage and your agent's runtime. Using proprietary algorithms, it pre-fetches context and has associative data points loaded and available for use.
 
-### Key Characteristics
+**Key Characteristics:**
 
-- **Decay**: Items decay over time if not accessed, simulating natural forgetting.
-- **Attention**: When you read (`drift`), items are returned sorted by relevance (Attention Score).
-- **High-Velocity**: Optimized for the rapid read/write cycles of an active agent loop.
+- **Decay**: Items decay over time if not accessed, simulating natural forgetting
+- **Attention**: Items are returned sorted by relevance (Attention Score)
+- **High-Velocity**: Optimized for rapid read/write cycles
 
-### Use Cases
-
-- Storing current task state
-- Recent conversation history
-- Scratchpad notes and intermediate thoughts
-
-### API
+**API:**
 
 | Method | Description |
 | :----- | :---------- |
@@ -39,34 +62,26 @@ Working Memory manages the agent's immediate context. Unlike a raw context windo
 
 ---
 
-## 2. Episodic Memory
+### 2. Episodic Memory
 
 **"The Autobiography"**
 
-Episodic Memory stores the history of interactions. Every action an agent takes can be "committed" as a trace, enabling learning from experience.
+Episodic Memory captures and tracks agent data including reasoning, inputs, outcomes, and actions. Every action an agent takes can be "committed" as a trace.
 
-### Trace Structure
-
-Each trace consists of four components:
+**Trace Structure:**
 
 - **Input**: What triggered the action
 - **Action**: What the agent decided to do
 - **Outcome**: The result of the action
 - **Reasoning**: Why the agent made that decision
 
-### Key Characteristics
+**Key Characteristics:**
 
-- **Semantic Retrieval**: Uses vector search to find past experiences similar to the current situation.
-- **Few-Shot Learning**: Past traces can be injected into prompts for in-context learning.
-- **Persistent**: Traces are stored long-term for continuous improvement.
+- **Semantic Retrieval**: Uses vector search to find similar past experiences
+- **Few-Shot Learning**: Past traces enable in-context learning
+- **Persistent**: Stored long-term for continuous improvement
 
-### Use Cases
-
-- Learning from past mistakes
-- Recalling user preferences from weeks ago
-- Few-shot prompting based on history
-
-### API
+**API:**
 
 | Method | Description |
 | :----- | :---------- |
@@ -75,25 +90,19 @@ Each trace consists of four components:
 
 ---
 
-## 3. Procedural Memory
+### 3. Procedural Memory
 
 **"The Muscle Memory"**
 
-Procedural Memory executes compiled skills (WebAssembly) server-side. These are deterministic, sandboxed procedures that agents can trigger.
+Procedural Memory is for executable skills, code, and sub-agents. It runs compiled WebAssembly skills server-side with deterministic, sandboxed execution.
 
-### Key Characteristics
+**Key Characteristics:**
 
-- **Compiled Skills**: Pre-built WebAssembly modules for common operations.
-- **Deterministic**: Same input always produces the same output.
-- **Sandboxed**: Runs securely on the server without exposing your infrastructure.
+- **Compiled Skills**: Pre-built WebAssembly modules for common operations
+- **Deterministic**: Same input always produces the same output
+- **Sandboxed**: Runs securely without exposing your infrastructure
 
-### Use Cases
-
-- Deterministic calculations (tax, pricing, conversions)
-- Data validation and transformation
-- Reusable tool implementations
-
-### API
+**API:**
 
 | Method | Description |
 | :----- | :---------- |
@@ -101,25 +110,25 @@ Procedural Memory executes compiled skills (WebAssembly) server-side. These are 
 
 ---
 
-## Architecture: Slate + RiceDB
+### 4. Semantic Memory
 
-Slate is the application layer built on top of **RiceDB**, a high-performance hyperdimensional computing engine.
+**"The Knowledge Base"**
 
-```
-┌─────────────────────────────────────┐
-│           Your AI Agent             │
-├─────────────────────────────────────┤
-│              Slate                  │
-│  ┌─────────┬─────────┬─────────┐    │
-│  │ Working │Episodic │Procedural│   │
-│  │ Memory  │ Memory  │ Memory  │    │
-│  └─────────┴─────────┴─────────┘    │
-├─────────────────────────────────────┤
-│             RiceDB                  │
-│   Hyperdimensional Computing Engine │
-└─────────────────────────────────────┘
-```
+Semantic Memory stores invariant facts and knowledge for agentic use. Unlike Episodic Memory which stores experiences, Semantic Memory holds general knowledge that doesn't change frequently.
+
+**Key Characteristics:**
+
+- **Factual Storage**: Stores facts, definitions, and reference data
+- **Knowledge Graphs**: Maintains relationships between concepts
+- **Shared Context**: Knowledge available across all agent sessions
+
+**Use Cases:**
+
+- Product catalogs and specifications
+- Company policies and procedures
+- Domain-specific knowledge bases
+- Reference documentation
 
 ::callout{icon="i-lucide-database" color="primary"}
-**RiceDB** handles the low-level storage, indexing, and vector operations. **Slate** provides the cognitive abstractions that make it easy to build learning, stateful agents.
+**Architecture Summary**: Your AI agents connect to Rice Slate, which manages the four memory types. Rice Slate is powered by RiceDB, which provides persistent storage using Hyperdimensional Computing.
 ::

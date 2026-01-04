@@ -16,10 +16,10 @@ Welcome to the Rice Slate tutorials. These comprehensive, course-style guides wa
 
 Each tutorial covers the complete agent development lifecycle:
 
-1. **Architecture Design** — Planning your agent's memory strategy
-2. **Memory Integration** — Implementing Working, Episodic, and Procedural memory
-3. **Learning Loops** — Building agents that improve over time
-4. **Production Patterns** — Error handling, testing, and deployment
+1. **Architecture Design**: Planning your agent's memory strategy
+2. **Memory Integration**: Implementing Working, Episodic, Procedural, and Semantic memory
+3. **Learning Loops**: Building agents that improve over time
+4. **Production Patterns**: Error handling, testing, and deployment
 
 ---
 
