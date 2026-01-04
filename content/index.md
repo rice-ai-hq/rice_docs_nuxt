@@ -6,7 +6,7 @@ seo:
 
 ::u-page-hero
 #title
-Welcome to Slate
+Welcome to Rice Slate
 
 #description
 **Cognitive Substrate for AI Agents**
