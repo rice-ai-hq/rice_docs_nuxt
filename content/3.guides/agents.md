@@ -15,12 +15,12 @@ Slate provides the cognitive substrate for building agents that learn from exper
 To build a "Cognitive Agent", weave Slate's memory systems into your LLM loop:
 
 1.  **Perceive**: Receive user input.
-2.  **Recall (Echoes)**: `client.reminisce(input)` → Add past relevant experiences to prompt (Few-Shot Learning).
-3.  **Orient (Flux)**: `client.drift()` → Add current context/state to prompt.
+2.  **Recall (Episodic Memory)**: `client.reminisce(input)` → Add past relevant experiences to prompt (Few-Shot Learning).
+3.  **Orient (Working Memory)**: `client.drift()` → Add current context/state to prompt.
 4.  **Decide (LLM)**: Generate a plan or action.
 5.  **Act**: Execute tool or generate response.
-6.  **Learn (Echoes)**: `client.commit(input, action, outcome)` → Save the result.
-7.  **Update Context (Flux)**: `client.focus(new_state)` → Update working memory.
+6.  **Learn (Episodic Memory)**: `client.commit(input, action, outcome)` → Save the result.
+7.  **Update Context (Working Memory)**: `client.focus(new_state)` → Update working memory.
 
 This loop turns a stateless LLM into an agent that learns from every interaction and maintains coherence over long conversations.
 
@@ -28,7 +28,7 @@ This loop turns a stateless LLM into an agent that learns from every interaction
 
 ## Memory Comparison
 
-| Feature       | Flux (Working Memory)                                     | Echoes (Episodic Memory)                |
+| Feature       | Working Memory                                            | Episodic Memory                         |
 | :------------ | :-------------------------------------------------------- | :-------------------------------------- |
 | **Purpose**   | Current task state, active context                        | Past experiences, learning history      |
 | **Retention** | Short-term (decays if not accessed)                       | Long-term (permanent)                   |
@@ -110,9 +110,9 @@ def agent_loop(user_input: str) -> str:
 
 ---
 
-## Using Reflex for Deterministic Tools
+## Using Procedural Memory for Deterministic Tools
 
-When your agent needs to execute deterministic operations, use Reflex:
+When your agent needs to execute deterministic operations, use Procedural Memory:
 
 ```typescript
 // Node.js
@@ -135,7 +135,7 @@ This keeps complex calculations server-side, sandboxed, and consistent.
 ::
 
 ::callout{icon="i-lucide-clock" color="amber"}
-**Let Flux Decay**: Don't overload working memory. Trust the decay mechanism to naturally prioritize recent, relevant context.
+**Let it Decay**: Don't overload working memory. Trust the decay mechanism to naturally prioritize recent, relevant context.
 ::
 
 ::callout{icon="i-lucide-brain" color="blue"}

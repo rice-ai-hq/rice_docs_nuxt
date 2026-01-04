@@ -1,7 +1,7 @@
 ---
 seo:
   title: Slate - Cognitive Substrate for AI Agents
-  description: Memory-as-a-service for AI agents. Structured Short-term (Flux), Long-term (Echoes), and Procedural (Reflex) memory powered by RiceDB.
+  description: Memory-as-a-service for AI agents. Structured Working, Episodic, and Procedural memory powered by RiceDB.
 ---
 
 ::u-page-hero
@@ -11,7 +11,7 @@ Welcome to Slate
 #description
 **Cognitive Substrate for AI Agents**
 
-Slate is a memory-as-a-service platform that provides structured **Flux** (Working Memory), **Echoes** (Episodic Memory), and **Reflex** (Procedural Memory)—powered by RiceDB.
+Slate is a memory-as-a-service platform that provides structured **Working Memory**, **Episodic Memory**, and **Procedural Memory**—powered by RiceDB.
 
 #links
 ::u-button
@@ -45,14 +45,14 @@ Why Slate?
 ---
 icon: i-lucide-brain
 title: Cognitive Memory Architecture
-description: Three-layer memory system inspired by human cognition. Flux for attention, Echoes for learning from experience, and Reflex for compiled skills.
+description: Three-layer memory system inspired by human cognition. Working Memory for attention, Episodic Memory for learning from experience, and Procedural Memory for compiled skills.
 ---
 :::
 
 :::u-page-feature
 ---
 icon: i-lucide-layers
-title: Flux - Working Memory
+title: Working Memory
 description: Dynamic attention-based context management. Items decay naturally over time if not accessed, simulating real working memory for your agents.
 ---
 :::
@@ -60,7 +60,7 @@ description: Dynamic attention-based context management. Items decay naturally o
 :::u-page-feature
 ---
 icon: i-lucide-search
-title: Echoes - Episodic Memory
+title: Episodic Memory
 description: Record and recall past experiences. Enable few-shot learning from history with semantic search over traces of Input, Action, Outcome, and Reasoning.
 ---
 :::
@@ -68,7 +68,7 @@ description: Record and recall past experiences. Enable few-shot learning from h
 :::u-page-feature
 ---
 icon: i-lucide-zap
-title: Reflex - Procedural Memory
+title: Procedural Memory
 description: Execute compiled WebAssembly skills server-side. Deterministic, sandboxed logic for calculations, tools, and reusable procedures.
 ---
 :::

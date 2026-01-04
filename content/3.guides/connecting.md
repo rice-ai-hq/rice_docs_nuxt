@@ -73,7 +73,7 @@ client = CortexClient(address="localhost:50051", token="your-secret-token")
 
 ## Verifying Your Connection
 
-Test your connection by performing a simple Flux operation:
+Test your connection by performing a simple Working Memory operation:
 
 ### Node.js
 
@@ -87,7 +87,7 @@ await client.focus("Connection test");
 
 // Read it back
 const items = await client.drift();
-console.log(`Connected! Found ${items.length} items in Flux.`);
+console.log(`Connected! Found ${items.length} items in Working Memory.`);
 ```
 
 ### Python
@@ -102,7 +102,7 @@ client.focus("Connection test")
 
 # Read it back
 items = client.drift()
-print(f"Connected! Found {len(items.items)} items in Flux.")
+print(f"Connected! Found {len(items.items)} items in Working Memory.")
 ```
 
 ## Transport Protocol

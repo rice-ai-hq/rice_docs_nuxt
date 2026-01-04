@@ -5,23 +5,23 @@ navigation:
   icon: i-lucide-lightbulb
 seo:
   title: Core Concepts
-  description: Deep dive into Flux, Echoes, and Reflex—the three memory systems in Slate.
+  description: Deep dive into Working, Episodic, and Procedural memory—the three memory systems in Slate.
 ---
 
 Slate is a "Cognitive Substrate" for AI agents—a memory-as-a-service platform that provides structured memory systems inspired by human cognition.
 
 ---
 
-## 1. Flux (Working Memory)
+## 1. Working Memory
 
 **"The Attention Span"**
 
-Flux manages the agent's immediate context. Unlike a raw context window, Flux is dynamic and attention-based.
+Working Memory manages the agent's immediate context. Unlike a raw context window, it is dynamic and attention-based.
 
 ### Key Characteristics
 
-- **Decay**: Items in Flux decay over time if not accessed, simulating natural forgetting.
-- **Attention**: When you read from Flux (`drift`), items are returned sorted by relevance (Attention Score).
+- **Decay**: Items decay over time if not accessed, simulating natural forgetting.
+- **Attention**: When you read (`drift`), items are returned sorted by relevance (Attention Score).
 - **High-Velocity**: Optimized for the rapid read/write cycles of an active agent loop.
 
 ### Use Cases
@@ -39,11 +39,11 @@ Flux manages the agent's immediate context. Unlike a raw context window, Flux is
 
 ---
 
-## 2. Echoes (Episodic Memory)
+## 2. Episodic Memory
 
 **"The Autobiography"**
 
-Echoes stores the history of interactions. Every action an agent takes can be "committed" as a trace, enabling learning from experience.
+Episodic Memory stores the history of interactions. Every action an agent takes can be "committed" as a trace, enabling learning from experience.
 
 ### Trace Structure
 
@@ -75,11 +75,11 @@ Each trace consists of four components:
 
 ---
 
-## 3. Reflex (Procedural Memory)
+## 3. Procedural Memory
 
 **"The Muscle Memory"**
 
-Reflex executes compiled skills (WebAssembly) server-side. These are deterministic, sandboxed procedures that agents can trigger.
+Procedural Memory executes compiled skills (WebAssembly) server-side. These are deterministic, sandboxed procedures that agents can trigger.
 
 ### Key Characteristics
 
@@ -111,8 +111,8 @@ Slate is the application layer built on top of **RiceDB**, a high-performance hy
 ├─────────────────────────────────────┤
 │              Slate                  │
 │  ┌─────────┬─────────┬─────────┐    │
-│  │  Flux   │ Echoes  │ Reflex  │    │
 │  │ Working │Episodic │Procedural│   │
+│  │ Memory  │ Memory  │ Memory  │    │
 │  └─────────┴─────────┴─────────┘    │
 ├─────────────────────────────────────┤
 │             RiceDB                  │
