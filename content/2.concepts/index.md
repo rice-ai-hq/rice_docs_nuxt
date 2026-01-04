@@ -1,90 +1,125 @@
 ---
 title: Core Concepts
-description: Understanding the foundational concepts of Rice.
+description: Understanding the foundational concepts of Slate.
 navigation:
   icon: i-lucide-lightbulb
 seo:
   title: Core Concepts
-  description: Deep dive into Scratchpad Memory, Semantic Search, and Neural Associations in Rice.
+  description: Deep dive into Flux, Echoes, and Reflex—the three memory systems in Slate.
 ---
 
-Rice is a serverless backend designed around key capabilities that enable stateful, context-aware AI agents.
-
----
-
-## 1. Long-Term Memory (Hyper Vectors & Associations)
-
-To make intelligent decisions, agents need access to vast amounts of persistent knowledge. Rice unifies two powerful paradigms to create a robust Long-Term Memory system.
-
-### Hyper Vectors
-
-Enable high-fidelity semantic search. Agents can "recall" information based on meaning rather than just keywords.
-
-- **High Dimensionality**: Data is projected into thousands of dimensions, capturing subtle nuances in meaning.
-- **Noise Tolerance**: The system is robust to imperfect queries or noisy data.
-- **Example**: Searching for "legal precedent for copyright" matches "IP infringement case law" even without shared keywords.
-
-### Neural Associations
-
-Encodes relationships directly into the high-dimensional space. Unlike traditional graphs that use rigid pointers, Rice uses fluid associations.
-
-- **Implicit Linking**: Relationships are discovered based on usage and context, not just manual entry.
-- **Path Navigation**: Agents can "follow" a thought process from one concept to another.
-- **Example**: Identifying that "Project X" is associated with "Team Alpha" and "Budget 2024" without explicit foreign keys.
-
-::callout{icon="i-lucide-network" color="primary"}
-**Structural Reasoning**: By combining these, agents can find a starting point via semantic search and then navigate associations to uncover deep, non-obvious context.
-::
+Slate is a "Cognitive Substrate" for AI agents—a memory-as-a-service platform that provides structured memory systems inspired by human cognition.
 
 ---
 
-## 2. Working Memory (Scratchpad)
+## 1. Flux (Working Memory)
 
-Just like humans have short-term memory for the task at hand, agents need a fast, ephemeral space for active context.
+**"The Attention Span"**
+
+Flux manages the agent's immediate context. Unlike a raw context window, Flux is dynamic and attention-based.
 
 ### Key Characteristics
 
-- **High-Velocity**: Optimized for the rapid read/write cycles of an active agent loop (latency < 1ms).
-- **Context-Aware**: Keeps current conversation history and intermediate "thoughts" distinct from long-term knowledge.
-- **Time-Ordered**: Essential for maintaining the sequence of a conversation or execution plan.
+- **Decay**: Items in Flux decay over time if not accessed, simulating natural forgetting.
+- **Attention**: When you read from Flux (`drift`), items are returned sorted by relevance (Attention Score).
+- **High-Velocity**: Optimized for the rapid read/write cycles of an active agent loop.
 
-### Session Management
+### Use Cases
 
-- **Isolation**: Create separate memory sessions for different agent tasks (e.g., `task-123`, `chat-user-456`).
-- **Auto-Expiry**: Set Time-To-Live (TTL) policies so old context doesn't clutter memory.
+- Storing current task state
+- Recent conversation history
+- Scratchpad notes and intermediate thoughts
 
----
+### API
 
-## 3. Access Control Lists (ACL)
-
-In multi-user or multi-agent environments, data isolation is critical.
-
-### The Problem
-
-Traditional vector databases often lack fine-grained security. Filtering results _after_ search is slow and insecure.
-
-### The Rice Solution
-
-- **Zero-Latency Checks**: Permissions are encoded into the search index itself.
-- **Document-Level Granularity**: Control `read`, `write`, and `delete` permissions per user and per document.
-- **Bitmap Indexing**: Uses efficient bitwise operations to filter millions of documents instantly.
+| Method | Description |
+| :----- | :---------- |
+| `focus(content)` | Push information into the agent's attention stream |
+| `drift()` | Retrieve current context sorted by relevance |
 
 ---
 
-## 4. Hyperdimensional Computing (HDC)
+## 2. Echoes (Episodic Memory)
 
-Under the hood, Rice uses advanced Hyperdimensional Computing techniques.
+**"The Autobiography"**
 
-### What is it?
+Echoes stores the history of interactions. Every action an agent takes can be "committed" as a trace, enabling learning from experience.
 
-A computing paradigm inspired by how the brain works, using large holographic vectors rather than numerical matrices.
+### Trace Structure
 
-### Why it matters?
+Each trace consists of four components:
 
-- **Efficiency**: Compresses complex data structures into fixed-size vectors, reducing memory footprint.
-- **Speed**: Operations like "binding" (combining concepts) are single-pass mathematical operations.
-- **Reliability**: Highly tolerant to hardware faults or bit-flips.
+- **Input**: What triggered the action
+- **Action**: What the agent decided to do
+- **Outcome**: The result of the action
+- **Reasoning**: Why the agent made that decision
 
-::tip
-You don't need to understand HDC math to use Rice, but it powers the speed and efficiency of the system.
+### Key Characteristics
+
+- **Semantic Retrieval**: Uses vector search to find past experiences similar to the current situation.
+- **Few-Shot Learning**: Past traces can be injected into prompts for in-context learning.
+- **Persistent**: Traces are stored long-term for continuous improvement.
+
+### Use Cases
+
+- Learning from past mistakes
+- Recalling user preferences from weeks ago
+- Few-shot prompting based on history
+
+### API
+
+| Method | Description |
+| :----- | :---------- |
+| `commit(input, outcome, action, reasoning)` | Record an experience as a trace |
+| `reminisce(query)` | Recall past experiences similar to the query |
+
+---
+
+## 3. Reflex (Procedural Memory)
+
+**"The Muscle Memory"**
+
+Reflex executes compiled skills (WebAssembly) server-side. These are deterministic, sandboxed procedures that agents can trigger.
+
+### Key Characteristics
+
+- **Compiled Skills**: Pre-built WebAssembly modules for common operations.
+- **Deterministic**: Same input always produces the same output.
+- **Sandboxed**: Runs securely on the server without exposing your infrastructure.
+
+### Use Cases
+
+- Deterministic calculations (tax, pricing, conversions)
+- Data validation and transformation
+- Reusable tool implementations
+
+### API
+
+| Method | Description |
+| :----- | :---------- |
+| `trigger(skill_name)` | Execute a server-side WASM skill |
+
+---
+
+## Architecture: Slate + RiceDB
+
+Slate is the application layer built on top of **RiceDB**, a high-performance hyperdimensional computing engine.
+
+```
+┌─────────────────────────────────────┐
+│           Your AI Agent             │
+├─────────────────────────────────────┤
+│              Slate                  │
+│  ┌─────────┬─────────┬─────────┐    │
+│  │  Flux   │ Echoes  │ Reflex  │    │
+│  │ Working │Episodic │Procedural│   │
+│  └─────────┴─────────┴─────────┘    │
+├─────────────────────────────────────┤
+│             RiceDB                  │
+│   Hyperdimensional Computing Engine │
+└─────────────────────────────────────┘
+```
+
+::callout{icon="i-lucide-database" color="primary"}
+**RiceDB** handles the low-level storage, indexing, and vector operations. **Slate** provides the cognitive abstractions that make it easy to build learning, stateful agents.
 ::

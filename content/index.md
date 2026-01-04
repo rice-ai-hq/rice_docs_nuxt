@@ -1,17 +1,17 @@
 ---
 seo:
-  title: Rice - Serverless Backend for Agentic Context & State
-  description: The first serverless backend purpose-built for AI agents. Manage agent context, state, and memory with a unified scratchpad and long-term storage.
+  title: Slate - Cognitive Substrate for AI Agents
+  description: Memory-as-a-service for AI agents. Structured Short-term (Flux), Long-term (Echoes), and Procedural (Reflex) memory powered by RiceDB.
 ---
 
 ::u-page-hero
 #title
-Welcome to Rice
+Welcome to Slate
 
 #description
-**Serverless Backend for Agentic Context & State**
+**Cognitive Substrate for AI Agents**
 
-Rice is the first serverless backend purpose-built for AI agents. Seamlessly manage agent context and state with **Scratchpad Memory**, **Semantic Search**, and **Neural Associations** in a single platform.
+Slate is a memory-as-a-service platform that provides structured **Flux** (Working Memory), **Echoes** (Episodic Memory), and **Reflex** (Procedural Memory)—powered by RiceDB.
 
 #links
 ::u-button
@@ -38,46 +38,46 @@ View on GitHub
 
 ::u-page-section
 #title
-Why Rice?
+Why Slate?
 
 #features
 :::u-page-feature
 ---
 icon: i-lucide-brain
-title: Serverless & Scalable
-description: No infrastructure to manage. Rice provides a fully managed backend for agent context and state. Scale from prototype to production without touching a config file.
+title: Cognitive Memory Architecture
+description: Three-layer memory system inspired by human cognition. Flux for attention, Echoes for learning from experience, and Reflex for compiled skills.
 ---
 :::
 
 :::u-page-feature
 ---
 icon: i-lucide-layers
-title: Scratchpad for Agent Context
-description: Purpose-built scratchpad memory for agent state management. Track conversations, tasks, and intermediate thoughts with millisecond latency. No embedding overhead.
+title: Flux - Working Memory
+description: Dynamic attention-based context management. Items decay naturally over time if not accessed, simulating real working memory for your agents.
 ---
 :::
 
 :::u-page-feature
 ---
 icon: i-lucide-search
-title: Semantic Memory & Associations
-description: Combine scratchpad context with semantic search over your knowledge base. Navigate neural associations to give agents true context understanding, not just similarity.
----
-:::
-
-:::u-page-feature
----
-icon: i-lucide-users
-title: Multi-Tenant Ready
-description: Built-in ACLs for secure data isolation. Perfect for building multi-user AI applications and SaaS platforms without managing your own backend infrastructure.
+title: Echoes - Episodic Memory
+description: Record and recall past experiences. Enable few-shot learning from history with semantic search over traces of Input, Action, Outcome, and Reasoning.
 ---
 :::
 
 :::u-page-feature
 ---
 icon: i-lucide-zap
-title: Production-Ready Performance
-description: Built on Rust with zero-copy architecture. Sub-millisecond scratchpad reads and low-latency semantic search optimized for real-time agent loops.
+title: Reflex - Procedural Memory
+description: Execute compiled WebAssembly skills server-side. Deterministic, sandboxed logic for calculations, tools, and reusable procedures.
+---
+:::
+
+:::u-page-feature
+---
+icon: i-lucide-database
+title: Powered by RiceDB
+description: Built on RiceDB's high-performance hyperdimensional computing engine. Sub-millisecond operations optimized for real-time agent loops.
 ---
 :::
 
@@ -85,7 +85,7 @@ description: Built on Rust with zero-copy architecture. Sub-millisecond scratchp
 ---
 icon: i-lucide-cloud
 title: Simple API, Powerful Features
-description: Get started in minutes with our Python SDK. No database schemas, no deployment pipelines. Just focus on building intelligent agents.
+description: Get started in minutes with Node.js or Python SDKs. Just focus on building intelligent, learning agents.
 ---
 :::
 ::

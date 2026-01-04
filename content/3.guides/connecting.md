@@ -1,89 +1,115 @@
 ---
-title: Connecting to Rice
-description: Learn how to connect to your Rice backend.
+title: Connecting to Slate
+description: Learn how to connect to your Slate instance.
 navigation:
   icon: i-lucide-plug
 seo:
-  title: Connecting to Rice
-  description: Detailed guide on connecting to your serverless Rice backend using Python SDK.
+  title: Connecting to Slate
+  description: Detailed guide on connecting to Slate using the Node.js and Python SDKs.
 ---
 
-Connecting to your Rice serverless backend is simple. The Python SDK supports multiple transport protocols to optimize for different use cases, abstracting most complexity while giving you control when needed.
+Connecting to Slate is simple. Both Node.js and Python clients use the `CortexClient` to communicate with your Slate instance.
 
 ## Installation
 
-Rice is currently in beta. Please install the client directly from the repository:
+### Node.js / TypeScript
 
 ```bash
-# Standard installation (HTTP support)
-pip install git+https://github.com/rice-ai-hq/ricedb-python
+npm install slate-client
+```
 
-# Recommended for production (adds gRPC support)
-pip install "git+https://github.com/rice-ai-hq/ricedb-python#egg=ricedb[grpc]"
+### Python
+
+```bash
+pip install slate-client
 ```
 
 ## Connection Basics
 
-The `RiceDBClient` will automatically attempt to connect using the best available transport (gRPC if available, otherwise HTTP).
+You need two pieces of information to connect:
+- **Address**: Your Slate instance address (e.g., `localhost:50051` or `xyz-123.slate.cloud:50051`)
+- **Auth Token**: Your secret authentication token
 
-```python
-from ricedb import RiceDBClient
+### Node.js
 
-# Connect to your instance host
-# Note: Do not include http:// or https:// prefix
-client = RiceDBClient("xyz-123.ricedb.cloud")
-client.connect()
+```typescript
+import { CortexClient } from "slate-client";
 
-# Login to get an access token
-client.login("admin", "your_password")
+const client = new CortexClient("localhost:50051", "your-secret-token");
 ```
 
-## Transport Modes
-
-### 1. HTTP Mode (Port 3000)
-
-- **Best for**: Development, firewalled environments, simple CRUD.
-- **Default Port**: 3000
-- **Pros**: Works everywhere, easy to debug with curl/Postman.
+### Python
 
 ```python
-# Force HTTP mode
-client = RiceDBClient("xyz-123.ricedb.cloud", transport="http", port=3000)
+from slate_client import CortexClient
+
+client = CortexClient(address="localhost:50051", token="your-secret-token")
 ```
 
-### 2. gRPC Mode (Port 50051)
+## Verifying Your Connection
 
-- **Best for**: Production, high-throughput, streaming search, real-time subscriptions.
-- **Default Port**: 50051
-- **Pros**: Faster serialization, bidirectional streaming, persistent connections.
+Test your connection by performing a simple Flux operation:
+
+### Node.js
+
+```typescript
+import { CortexClient } from "slate-client";
+
+const client = new CortexClient("localhost:50051", "your-secret-token");
+
+// Add something to working memory
+await client.focus("Connection test");
+
+// Read it back
+const items = await client.drift();
+console.log(`Connected! Found ${items.length} items in Flux.`);
+```
+
+### Python
 
 ```python
-# Force gRPC mode
-client = RiceDBClient("xyz-123.ricedb.cloud", transport="grpc", port=50051)
+from slate_client import CortexClient
+
+client = CortexClient(address="localhost:50051", token="your-secret-token")
+
+# Add something to working memory
+client.focus("Connection test")
+
+# Read it back
+items = client.drift()
+print(f"Connected! Found {len(items.items)} items in Flux.")
 ```
+
+## Transport Protocol
+
+Slate uses gRPC for efficient, low-latency communication. The default port is `50051`.
 
 ::callout{icon="i-lucide-zap" color="primary"}
-For production deployments, we recommend using gRPC for better performance.
+gRPC provides faster serialization, bidirectional streaming, and persistent connections—ideal for real-time agent loops.
 ::
 
-## Troubleshooting Connections
+## Troubleshooting
 
 ### "Connection Refused"
 
-- Ensure the host address is correct.
-- Check if your firewall allows outbound traffic on ports 3000 or 50051.
-- Verify the instance status in the [Rice Console](https://app.tryrice.com).
+- Ensure the address is correct (format: `host:port`).
+- Check if your firewall allows outbound traffic on port 50051.
+- Verify the instance is running in the [Console](https://app.tryrice.com).
 
 ### "Authentication Failed"
 
-- Double-check your username (default: `admin`) and password.
-- Passwords can be reset from the Console if needed.
+- Double-check your auth token.
+- Tokens can be regenerated from the Console if needed.
 
 ### "Transport Error"
 
-- If using gRPC, ensure `ricedb[grpc]` is installed.
-- Try falling back to HTTP to rule out network protocol issues.
+- Ensure your network allows gRPC traffic.
+- Some corporate proxies block gRPC—try from a different network.
 
 ::tip
-Use HTTP mode during development for easier debugging, then switch to gRPC in production for better performance.
+Use environment variables to store your auth token securely:
+```bash
+export SLATE_TOKEN="your-secret-token"
+```
+Then read it in your code to avoid hardcoding secrets.
 ::
