@@ -43,9 +43,7 @@ Rice Slate is the state and runtime context management layer that sits between y
 
 ### 1. Working Memory
 
-**"The Attention Span"**
-
-Working Memory is the direct bridge between persistent storage and your agent's runtime. Using proprietary algorithms, it pre-fetches context and has associative data points loaded and available for use.
+Working Memory is the direct bridge between persistent storage and your agent's runtime. It pre-fetches context and has associative data points loaded and available for use.
 
 **Key Characteristics:**
 
@@ -64,9 +62,7 @@ Working Memory is the direct bridge between persistent storage and your agent's 
 
 ### 2. Episodic Memory
 
-**"The Autobiography"**
-
-Episodic Memory captures and tracks agent data including reasoning, inputs, outcomes, and actions. Every action an agent takes can be "committed" as a trace.
+Episodic Memory captures and tracks agent data including reasoning, inputs, outcomes, and actions. Every action an agent takes can be committed as a trace.
 
 **Trace Structure:**
 
@@ -92,9 +88,7 @@ Episodic Memory captures and tracks agent data including reasoning, inputs, outc
 
 ### 3. Procedural Memory
 
-**"The Muscle Memory"**
-
-Procedural Memory is for executable skills, code, and sub-agents. It runs compiled WebAssembly skills server-side with deterministic, sandboxed execution.
+Procedural Memory stores executable skills, code, and sub-agents. It runs compiled WebAssembly modules server-side with deterministic, sandboxed execution.
 
 **Key Characteristics:**
 
@@ -111,8 +105,6 @@ Procedural Memory is for executable skills, code, and sub-agents. It runs compil
 ---
 
 ### 4. Semantic Memory
-
-**"The Knowledge Base"**
 
 Semantic Memory stores invariant facts and knowledge for agentic use. Unlike Episodic Memory which stores experiences, Semantic Memory holds general knowledge that doesn't change frequently.
 

@@ -1,86 +1,57 @@
 ---
 title: Tutorials
-description: Step-by-step guides for building production-ready agents with Rice Slate.
+description: Step-by-step guides for building agents with Rice Slate.
 navigation:
   icon: i-lucide-graduation-cap
 seo:
   title: Rice Slate Tutorials
-  description: Comprehensive tutorials for building intelligent, learning AI agents with Rice Slate's memory systems.
+  description: Practical tutorials for building learning AI agents with Rice Slate.
 ---
 
-Welcome to the Rice Slate tutorials. These comprehensive, course-style guides walk you through building real-world agents from scratch.
+Learn by building. Each tutorial walks through a complete agent from start to finish.
 
 ---
 
 ## What You'll Learn
 
-Each tutorial covers the complete agent development lifecycle:
-
-1. **Architecture Design**: Planning your agent's memory strategy
-2. **Memory Integration**: Implementing Working, Episodic, Procedural, and Semantic memory
-3. **Learning Loops**: Building agents that improve over time
-4. **Production Patterns**: Error handling, testing, and deployment
+- How to integrate Rice Slate memory into your agent loop
+- The focus/drift/reminisce/commit pattern
+- How agents improve over time through learning
 
 ---
 
 ## Prerequisites
 
-Before starting these tutorials, ensure you have:
-
 - Completed the [Getting Started](/getting-started/introduction) guide
-- Familiarity with the [Core Concepts](/concepts)
-- Rice Slate client installed ([Node.js or Python](/guides/connecting))
-- Access to an LLM API (OpenAI, Anthropic, or similar)
+- Rice Slate client installed
+- Access to an LLM API (OpenAI, Anthropic, etc.)
 
 ---
 
-## Available Tutorials
+## Tutorials
 
 ::card-group
   ::card
   ---
   icon: i-lucide-headphones
-  title: "Tutorial 1: Customer Support Agent"
+  title: "Customer Support Agent"
   to: /tutorials/customer-support-agent
   ---
-  Build a customer support agent that learns from past tickets, maintains conversation context, and escalates appropriately. Covers multi-turn conversations, preference learning, and escalation logic.
+  Build a support agent that remembers conversations and learns from past resolutions. Complete in under 100 lines.
   ::
 
   ::card
   ---
   icon: i-lucide-search
-  title: "Tutorial 2: Research Assistant Agent"
+  title: "Research Assistant"
   to: /tutorials/research-assistant
   ---
-  Build a research assistant that synthesizes information across sessions, remembers user research interests, and builds a personalized knowledge graph. Covers long-term learning and cross-session context.
+  Build an assistant that remembers your research interests and improves recommendations over time.
   ::
 ::
 
 ---
 
-## Tutorial Format
-
-Each tutorial follows a consistent structure:
-
-| Section | Description |
-| :------ | :---------- |
-| **Overview** | Problem statement and what we're building |
-| **Architecture** | Memory design and agent flow diagram |
-| **Setup** | Project scaffolding and dependencies |
-| **Implementation** | Step-by-step code walkthrough |
-| **Testing** | Validating agent behavior |
-| **Enhancements** | Ideas for extending the agent |
-
----
-
-## Difficulty Level
-
-These tutorials are **intermediate to advanced**. They assume familiarity with:
-
-- Async programming (Python asyncio or Node.js promises)
-- LLM API integration patterns
-- Basic agent architecture concepts
-
 ::callout{icon="i-lucide-clock" color="amber"}
-**Time Investment**: Each tutorial takes approximately 2-3 hours to complete thoroughly.
+**Time**: Each tutorial takes about 30-60 minutes.
 ::
