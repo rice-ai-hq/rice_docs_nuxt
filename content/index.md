@@ -45,7 +45,7 @@ Why Slate?
 ---
 icon: i-lucide-brain
 title: Cognitive Memory Architecture
-description: Three-layer memory system inspired by human cognition. Working Memory for attention, Episodic Memory for learning from experience, and Procedural Memory for compiled skills.
+description: Four-component memory system inspired by human cognition. Working, Episodic, Procedural, and Semantic memory for building truly intelligent agents.
 ---
 :::
 
@@ -77,15 +77,15 @@ description: Execute compiled WebAssembly skills server-side. Deterministic, san
 ---
 icon: i-lucide-database
 title: Powered by RiceDB
-description: Built on RiceDB's high-performance hyperdimensional computing engine. Sub-millisecond operations optimized for real-time agent loops.
+description: Built on RiceDB's Hyperdimensional Computing engine. Sub-millisecond operations optimized for real-time agent loops.
 ---
 :::
 
 :::u-page-feature
 ---
-icon: i-lucide-cloud
-title: Simple API, Powerful Features
-description: Get started in minutes with Node.js or Python SDKs. Just focus on building intelligent, learning agents.
+icon: i-lucide-git-compare
+title: Built for Agents, Not Chatbots
+description: Unlike vector databases or simple memory layers, Rice Slate provides a complete cognitive substrate with execution, learning, and attention.
 ---
 :::
 ::
