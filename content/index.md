@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Rice - Cognitive Substrate for AI Agents
-  description: Memory-as-a-service for AI agents. Structured Working, Episodic, Procedural, and Semantic memory.
+  title: Rice - Memory & State for AI Agents
+  description: Complete memory infrastructure for AI agents. High-performance storage meets cognitive memory architecture for agents that remember, learn, and adapt.
 ---
 
 ::u-page-hero
