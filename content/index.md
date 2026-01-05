@@ -1,17 +1,17 @@
 ---
 seo:
-  title: Rice Slate - Cognitive Substrate for AI Agents
+  title: Rice - Cognitive Substrate for AI Agents
   description: Memory-as-a-service for AI agents. Structured Working, Episodic, Procedural, and Semantic memory.
 ---
 
 ::u-page-hero
 #title
-Welcome to Rice Slate
+Welcome to Rice
 
 #description
 **Cognitive Substrate for AI Agents**
 
-Slate is a memory-as-a-service platform that provides structured **Working Memory**, **Episodic Memory**, **Procedural Memory**, and **Semantic Memory**.
+Rice is a complete memory infrastructure that gives AI agents the ability to remember, learn, and adapt. High-performance storage meets cognitive memory architecture.
 
 #links
 ::u-button
@@ -38,7 +38,7 @@ View on GitHub
 
 ::u-page-section
 #title
-Why Slate?
+Why Rice?
 
 #features
 :::u-page-feature
@@ -77,7 +77,7 @@ description: Execute compiled WebAssembly skills server-side. Deterministic, san
 ---
 icon: i-lucide-git-compare
 title: Built for Agents, Not Chatbots
-description: Unlike vector databases or simple memory layers, Rice Slate provides a complete cognitive substrate with execution, learning, and attention.
+description: Unlike vector databases or simple memory layers, Rice provides a complete cognitive substrate with execution, learning, and attention.
 ---
 :::
 ::

@@ -1,11 +1,11 @@
 ---
 title: Tutorials
-description: Step-by-step guides for building agents with Rice Slate.
+description: Step-by-step guides for building agents with Rice.
 navigation:
   icon: i-lucide-graduation-cap
 seo:
-  title: Rice Slate Tutorials
-  description: Practical tutorials for building learning AI agents with Rice Slate.
+  title: Rice Tutorials
+  description: Practical tutorials for building learning AI agents with Rice.
 ---
 
 Learn by building. Each tutorial walks through a complete agent from start to finish.
@@ -14,7 +14,7 @@ Learn by building. Each tutorial walks through a complete agent from start to fi
 
 ## What You'll Learn
 
-- How to integrate Rice Slate memory into your agent loop
+- How to integrate Rice memory into your agent loop
 - The focus/drift/reminisce/commit pattern
 - How agents improve over time through learning
 
@@ -23,7 +23,7 @@ Learn by building. Each tutorial walks through a complete agent from start to fi
 ## Prerequisites
 
 - Completed the [Getting Started](/getting-started/introduction) guide
-- Rice Slate client installed
+- Rice client installed
 - Access to an LLM API (OpenAI, Anthropic, etc.)
 
 ---

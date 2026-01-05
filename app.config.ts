@@ -1,14 +1,17 @@
 export default defineAppConfig({
   header: {
     // Title to display if no logo
-    title: 'Rice',
+    title: "Rice",
     // Logo configuration
     logo: {
-      alt: '',
+      alt: "",
       // Light mode
-      light: '',
+      light: "",
       // Dark mode
-      dark: ''
+      dark: "",
     },
   },
-})
+  github: {
+    url: "https://github.com/rice-ai-hq",
+  },
+});
