@@ -39,21 +39,16 @@ This loop turns a stateless LLM into an agent that learns from every interaction
 
 ## Code Example: Full Agent Loop
 
-::callout{icon="i-lucide-info" color="blue"}
-**Note**: Adjust your import path based on where you cloned the repository.
-::
-
 ### Node.js / TypeScript
 
 ```typescript
-// Adjust path to your local clone
-import { CortexClient } from "./rice_slate/clients/node/dist";
+import { CortexClient } from "slate-client";
 
-const client = new CortexClient("localhost:50051", "your-token");
+const client = new CortexClient("grpc.your-instance-id.slate.tryrice.com:80", "your-token", "my-agent");
 
 async function agentLoop(userInput: string) {
   // 1. RECALL: Check if we've handled something similar before
-  const pastExperiences = await client.reminisce(userInput);
+  const pastExperiences = await client.reminisce(userInput, 3);
   
   // 2. ORIENT: Get current context from working memory
   const currentContext = await client.drift();
@@ -81,11 +76,11 @@ async function agentLoop(userInput: string) {
 ```python
 from slate_client import CortexClient
 
-client = CortexClient(address="localhost:50051", token="your-token")
+client = CortexClient(address="grpc.your-instance-id.slate.tryrice.com:80", token="your-token", run_id="my-agent")
 
 def agent_loop(user_input: str) -> str:
     # 1. RECALL: Check if we've handled something similar before
-    past_experiences = client.reminisce(user_input).traces
+    past_experiences = client.reminisce(user_input, limit=3).traces
     
     # 2. ORIENT: Get current context from working memory
     current_context = client.drift().items
@@ -96,8 +91,8 @@ def agent_loop(user_input: str) -> str:
     
     # 4. LEARN: Record this experience for future reference
     client.commit(
-        input=user_input,
-        outcome=response,
+        user_input,  # input
+        response,  # outcome
         action="respond",
         reasoning="User query"
     )
