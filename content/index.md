@@ -18,7 +18,7 @@ Rice is a complete memory infrastructure that gives AI agents the ability to rem
 ---
 color: neutral
 size: xl
-to: /getting-started/introduction
+to: /v2/getting-started/introduction
 trailing-icon: i-lucide-arrow-right
 ---
 Get started
