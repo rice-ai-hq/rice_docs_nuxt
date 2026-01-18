@@ -1,4 +1,5 @@
 ---
+layout: page
 seo:
   title: Rice - Memory & State for AI Agents
   description: Complete memory infrastructure for AI agents. High-performance storage meets cognitive memory architecture for agents that remember, learn, and adapt.
