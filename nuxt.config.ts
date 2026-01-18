@@ -1,4 +1,12 @@
 export default defineNuxtConfig({
+  ignore: ["examples/**"],
+  vite: {
+    server: {
+      watch: {
+        ignored: ["**/examples/**", "**/node_modules/**"],
+      },
+    },
+  },
   site: {
     name: "Slate",
     url: "https://docs.tryrice.com",
