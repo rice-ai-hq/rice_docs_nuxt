@@ -12,13 +12,13 @@ const items = [
   [
     {
       label: "v2.x",
-      click: () => router.push("/v2"),
+      to: "/v2",
     },
   ],
   [
     {
       label: "v1.x",
-      click: () => router.push("/v1"),
+      to: "/v1",
     },
   ],
 ];
