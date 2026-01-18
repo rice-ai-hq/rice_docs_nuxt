@@ -8,7 +8,21 @@ icon: i-heroicons-archive-box
 This is the documentation for the legacy version of Rice (Slate and RiceDB).
 
 ::u-alert
-This version is deprecated. Please upgrade to [v2](/v2/getting-started/introduction).
+---
+title: Deprecated Version
+description: This version is deprecated. Please upgrade to v2.
+icon: i-heroicons-exclamation-triangle
+color: amber
+variant: solid
+---
 ::
 
-[Get Started with v1](/v1/getting-started/introduction)
+::u-button
+---
+label: Get Started with v1
+to: /v1/getting-started/introduction
+color: gray
+variant: ghost
+trailing-icon: i-heroicons-arrow-right-20-solid
+---
+::

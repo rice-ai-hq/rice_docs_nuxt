@@ -7,4 +7,21 @@ icon: i-heroicons-bolt
 
 The unified Node.js SDK for Rice.
 
-[Get Started](/v2/getting-started/introduction)
+::u-alert
+---
+title: Latest Version
+description: You are viewing the documentation for the latest version of Rice SDK.
+icon: i-heroicons-check-circle
+color: primary
+variant: soft
+---
+::
+
+::u-button
+---
+label: Get Started
+to: /v2/getting-started/introduction
+size: xl
+trailing-icon: i-heroicons-arrow-right-20-solid
+---
+::
